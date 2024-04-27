@@ -249,7 +249,7 @@ class SMAClientProtocol(DatagramProtocol):
         value = int.from_bytes(data[offset:offset + 8], "little")
         return value
 
-    def send_next_command(self):
+    def  send_next_command(self):
         if self.inverter["command_index"] >= len(self.inverter["command_query_list"]):
             self.inverter["command_index"] = 0
         else:
@@ -272,6 +272,7 @@ class SMAClientProtocol(DatagramProtocol):
 
         elif len(data) <= 58:
             _LOGGER.error(f"Short datagram received: [{len(data)}] -- {data}")
+            self.send_next_command()
             return
 
         elif ril_key in ril_index:
