@@ -1,0 +1,19 @@
+{
+   "inverters" : {
+      "192.168.2.81" : {
+         "command_query_list" : [
+            "energy_production",
+            "spot_ac_power",
+            "spot_ac_voltage",
+            "spot_dc_power",
+            "spot_dc_voltage",
+            "grid_frequency",
+            "inverter_status",
+            "grid_relay_status",
+            "inverter_temperature"
+         ],
+         "serial" : 3016252003,
+         "user_password" : "xyz"
+      }
+   }
+}
